@@ -9,12 +9,16 @@
 
 기존 연구들은 주로 단백질의 3차원 구조를 기반으로 했기 때문에, 구조 확보에 많은 비용과 시간이 소요되는 한계가 있었다. 이에 따라 서열 기반 접근법이 최근 활발히 연구되고 있으며, 본 프로젝트에서는 이를 바탕으로 결합 부위와 결합 친화도를 동시에 예측하는 통합 모델을 제안한다.
 
-***
 
 ### 2. 개발 목표
-본 프로젝트에서는 단백질 서열 데이터를 기반으로 결합 부위와 결합 친화도를 동시에 예측하고, 예측된 결합 부위를 3D로 시각화할 수 있는 웹 서비스를 고안하였다. 이를 위해 결합 부위 예측 모델과 결합 친화도 예측 모델을 개발하고, 두 결과를 통합적으로 확인할 수 있는 웹 인터페이스를 구현하였다.
+본 프로젝트의 목표는 단백질 서열만으로
 
-***
+* 결합 부위와 결합 친화도를 동시에 예측하고,
+* 예측된 결합 부위를 3D로 시각화,
+* 최종적으로 결과를 확인할 수 있는 웹 서비스로 구현하는 것이다.
+
+이를 위해 두 가지 예측 모델(결합 부위 예측 / 친화도 예측)을 개발하고, 결과를 통합적으로 제공하는 웹 인터페이스를 설계하였다.
+
 
 ### 3. 필요성과 기대효과
 본 프로젝트는 기존의 구조 기반 접근이 가지는 시간적·경제적 한계를 극복하고, 단백질 서열만으로도 결합 부위와 결합 친화도를 동시에 예측할 수 있는 새로운 방안을 제시한다.  
@@ -28,7 +32,6 @@
 
 특히, 결합 부위 예측과 친화도 평가를 한 번에 제공함으로써 연구자들이 보다 효율적으로 실험을 설계할 수 있고, 예측 결과를 3D로 시각화하여 직관적인 해석이 가능하다. 웹 서비스 형태로 구현함으로써 접근성과 편의성을 높였으며, 이는 여러 방면에서 폭넓은 활용이 가능할 것으로 기대된다.
 
-***
 
 ### 4. 시스템 설계
 
@@ -38,24 +41,35 @@
 - 출력: 예측된 결합 부위(3D 시각화), 결합 친화도 값  
 
 #### 4.2. 사용 기술
+- **Languages**
+  - Python 3.10.18
+
 - **Frameworks**
   - PyTorch (모델 구현 및 학습)
   - HuggingFace Transformers (사전학습 모델 활용)
+  - Node.js + Express (웹 백엔드)
+  - React (웹 프론트엔드)
 
 - **Libraries**
   - 단백질 임베딩: ESM-2
   - 리간드 임베딩: ChemBERTa
-  - 리간드 전처리: RDKit, OpenBabel
+  - 화학 전처리: RDKit, OpenBabel
   - 데이터 처리: NumPy, Pandas
+  - 시각화: Matplotlib, Seaborn, NGL Viewer
 
-***
+- **Tools**
+  - Git & GitHub
+  - Jupyter Lab
+  - Conda (가상환경 관리)
+  - Docker (실행 환경 배포)
+
 
 ### 5. 개발 결과
 
 #### 5.1. 전체 시스템 흐름도
 ![service_Architecture](./img/service_architecture.png)  
 
-#### 5.2. 데이터 흐름도 및 모델 구
+#### 5.2. 데이터 흐름도 및 모델 구조
 - **웹**
 - ![data_flow](./img/data_flow.png)  
 - **결합 부위 예측 모델**
@@ -145,9 +159,13 @@
 ```
 ### 6. 설치 및 실행 방법
 
-- **웹 서비스**  
-- **Binding site model**  
-- **Binding affinity model**  
+- **웹 서비스**
+
+```bash
+
+```
+
+- **Binding site model**
 
 ```bash
 # Binding-site 예측 모델 학습
@@ -155,7 +173,11 @@ python train.py -c configuration.yml
 
 #Binding-site 예측 모델 검증
 python test.py -c configuration.yml --no-labels
+```
 
+- **Binding affinity model**  
+
+```bash
 # Binding-affinity 예측 모델 학습
 python train.py
 
@@ -164,21 +186,21 @@ python eval.py
 ```
 
 ### 7. 소개 자료 및 시연 영상
-- 프로젝트 소개 자료 (PPT)
+**프로젝트 소개 자료 (PPT)**
 <link>
 <docs/03.발표자료/발표자료.pptx>
     
-- 시연 영상
-[![2025 전기 졸업과제 05 으쌰으쌰](http://img.youtube.com/vi/KX1Z7JPGk7Y/0.jpg)](https://www.youtube.com/watch?v=KX1Z7JPGk7Y)    
+**시연 영상**
+[2025 전기 졸업과제 05 으쌰으쌰](https://www.youtube.com/watch?v=KX1Z7JPGk7Y)
 
-***
+[![2025 전기 졸업과제 05 으쌰으쌰](http://img.youtube.com/vi/KX1Z7JPGk7Y/0.jpg)](https://www.youtube.com/watch?v=KX1Z7JPGk7Y)
+
 
 ### 8. 팀 구성
 - **juju♥**: 웹 인터페이스 개발 및 연동, 단백질·리간드 구조 시각화  
 - **shu♥**: 결합 부위 예측 모델 개발  
 - **dada♥**: 결합 친화도 예측 모델 개발  
 
-***
 
 ### 9. 참고 문헌 및 출처
 1. A. Vaswani et al., *Attention Is All You Need,* arXiv preprint arXiv:1706.03762, Aug. 2023. [Online]. Available: <https://arxiv.org/abs/1706.03762>  

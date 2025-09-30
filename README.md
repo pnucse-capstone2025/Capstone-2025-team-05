@@ -71,11 +71,11 @@
 
 #### 5.2. 데이터 흐름도 및 모델 구조
 - **웹**
-- ![data_flow](./img/data_flow.png)  
+ ![data_flow](./img/data_flow.png)  
 - **결합 부위 예측 모델**
-- ![bs_model](./img/bs_model.png)  
+ ![bs_model](./img/bs_model.png)  
 - **결합 친화도 예측 모델**  
-- ![ba_model](./img/ba_model.png)  
+ ![ba_model](./img/ba_model.png)  
 
 #### 5.3. 디렉토리 구조
 ``` bash

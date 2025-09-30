@@ -1,45 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/nRcUn8vA)
-# Template for Capstone
-이 레파지토리는 학생들이 캡스톤 프로젝트 결과물을 위한 레파지토리 생성시에 참고할 내용들을 담고 있습니다.
-1. 레파지토리 생성
-2. 레파지토리 구성
-3. 레파지토리 제출 
-4. README.md 가이드라인
-5. README.md 작성팁
-
----
-
-## 1. 레파지토리 생성
-- [https://classroom.github.com/a/nRcUn8vA](https://classroom.github.com/a/nRcUn8vA)
-- 위 Github Classroom 링크에 접속해 본인 조의 github 레파지토리를 생성하세요.
-
-<img width="700" alt="깃헙 클래스룸 레포 생성" src="https://github.com/user-attachments/assets/34ca1f43-c2cd-4880-a39e-0dafd889c35f" />
-
-- 레포지토리 생성 시 팀명은 `TEAM-{조 번호}` 형식으로 생성하세요.
-- 예를 들어, 2025년도 3조의 팀명은 `TEAM-03` 입니다.
-- 이 경우 `Capstone2025-team-03`이란 이름으로 레파지토리가 생성됩니다.
-
----
-
-## 2. 레파지토리 구성
-- 레파지토리 내에 README.md 파일 생성하고 아래의 가이드라인과 작성팁을 참고하여 README.md 파일을 작성하세요. (이 레파지토리의 SAMPLE_README.md 참조)
-- 레파지토리 내에 docs 디렉토리를 생성하고 docs 디렉토리 내에는 과제 수행 하면서 작성한 각종 보고서, 발표자료를 올려둡니다. (이 레파지토리의 docs 디렉토리 참조)
-- 그 밖에 레파지토리의 폴더 구성은 과제 결과물에 따라 자유롭게 구성하되 가급적 코드의 목적이나 기능에 따라 디렉토리를 나누어 구성하세요.
-
----
-
-## 3. 레파지토리 제출 
-
-- **`[주의]` 레파지토리 제출**은 해당 레파지토리의 ownership을 **학과 계정**으로 넘기는 것이므로 되돌릴 수 없습니다.
-- **레파지토리 제출** 전, 더 이상 수정 사항이 없는지 다시 한번 확인하세요.
-- github 레파지토리에서 Settings > General > Danger zone > Transfer 클릭
-  <img src="https://github.com/user-attachments/assets/cb2361d4-e07e-4b5d-9116-aa80dddd8a8b" alt="소유주 변경 경로" width="500" />
-  
-- [ Specify an organization or username ]에 'PNUCSE'를 입력하고 확인 메세지를 입력하세요.
-  <img src="https://github.com/user-attachments/assets/7c63955d-dcfe-4ac3-bdb6-7d2620575f3a" alt="소유주 변경" width="400" />
-
----
-
 ## 4. README.md 가이드 라인
 - README 파일 작성시에 아래의 5가지 항목의 내용은 필수적으로 포함해야 합니다.
 - 아래의 항목이외에 프로젝트의 이해를 돕기 위한 내용을 추가해도 됩니다.
@@ -56,23 +14,32 @@
 ### 2. 개발 목표
 #### 2.1. 목표 및 세부 내용
 > 전체적인 개발 목표, 주요 기능 및 기획 내용
+본 과제의 목표는 단백질과 리간드 간의 상호작용을 정밀하게 이해하기 위해, 단백질과 리간드 간의 결합 부위(binding site)와 결합 친화도(binding affinity)를 예측할 수 있는 딥러닝 기반의 예측 모델을 개발하는 데 있다. 이렇게 개발된 모델을 쉽게 활용할 수 있도록 웹페이지 형태의 인터페이스로 구현하여, 사용자들의 접근성과 편의성을 향상시키는 것을 목표로 한다. 특히, 실제 사용자 환경에서의 활용성을 고려하여, 서열 기반 모델 구현을 목표로 하였다.
 
 #### 2.2. 기존 서비스 대비 차별성 
 > 유사 서비스 비교 및 차별점 부각
+Planet-X는 결합 부위 및 결합 친화도를 단백질 서열과 리간드 Smiles만으로 동시에 예측할 수 있으며 결합 부위를 시각적으로 포착할 수 있다는 점에서 차별성을 가진다.
 
 #### 2.3. 사회적 가치 도입 계획 
 > 프로젝트의 공공성, 지속 가능성, 환경 보호 등
+신약 개발에 핵심적인... 에효
 ### 3. 시스템 설계
 #### 3.1. 시스템 구성도
 > 이미지 혹은 텍스트로 시스템 아키텍쳐 작성
->
+>차례대로 웹 아키텍처, binding site 모델 아키텍처, binding affinity 모델 아키텍처이다.
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 #### 3.2. 사용 기술
 > 프론트엔드, 백엔드, API 등 구체 기술 스택
 
 ### 4. 개발 결과
 #### 4.1. 전체 시스템 흐름도
 > 기능 흐름 설명 및 도식화 가능
->
+>![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
 #### 4.2. 기능 설명 및 주요 기능 명세서
 > 주요 기능에 대한 상세 설명, 각 기능의 입력/출력 및 설명
 >
@@ -101,6 +68,22 @@
 > 개별적으로 느낀 점, 협업, 기술적 어려움 극복 사례 등
 
 ### 8. 참고 문헌 및 출처
+[1] A. Vaswani, L. Jones, N. Shazeer, N. Parmar, A. N. Gomez, J. Uszkoreit, Ł. Kaiser, and I. Polosukhin, “Attention Is All You Need,” arXiv preprint arXiv:1706.03762, Aug. 2023. [Online]. Available: https://arxiv.org/abs/1706.03762
+[2] A. Morehead and J. Cheng, “FlowDock: Geometric Flow Matching for Generative Protein-Ligand Docking and Affinity Prediction,” arXiv preprint arXiv:2412.10966, Mar. 2025.
+[3] Z. Jin, T. Wu, T. Chen, D. Pan, X. Wang, J. Xie, L. Quan, and Q. Lyu, “CAPLA: improved prediction of protein–ligand binding affinity by a deep learning approach based on across-attention mechanism,” Briefings in Bioinformatics, vol. 24, no. 1, pp. 1–9, Jan. 2023. doi: 10.1093/bib/bbac534
+[4] H. Öztürk, E. Ozkirimli, and A. Özgür, “DeepDTA: Deep drug-target binding affinity prediction,” arXiv preprint arXiv:1801.10193, Jan. 2018.
+[5] K. Wang, R. Zhou, Y. Li, and M. Li, “DeepDTAF: A deep learning method to predict protein–ligand binding affinity,” School of Computer Science and Engineering, Central South University, Changsha, China, 2020.
+[6] X. Zhang, H. Gao, H. Wang, Z. Chen, Z. Zhang, X. Chen, Y. Li, Y. Qi, and R. Wang, “PLANET: A Multi-objective Graph Neural Network Model for Protein-Ligand Binding Affinity Prediction,” J. Chem. Inf. Model., vol. 64, pp. 2205–2222, 2024.
+[7] Y. Wang, Q. Jiao, J. Wang, X. Cai, W. Zhao, and X. Cui, “Prediction of protein-ligand binding affinity with deep learning,” Comput. Struct. Biotechnol. J., vol. 21, pp. 123–135, Nov. 2023. doi: 10.1016/j.csbj.2023.11.009
+[8] S. Xu, L. Shen, M. Zhang, C. Jiang, X. Zhang, Y. Xu, J. Liu, and X. Liu, “Surface-based multimodal protein–ligand binding affinity prediction,” Bioinformatics, vol. 40, no. 7, btae413, Jul. 2024. doi: 10.1093/bioinformatics/btae413
+[9] M.-H. Wu, Z. Xie, and D. Zhi, “Protein-ligand binding affinity prediction: Is 3D binding pose needed?” Communications Chemistry, vol. 8, no. 2, pp. 1–10, Mar. 2025. doi: 10.1038/s42004-025-01506-1
+[10] I. Lee and H. Nam, “Highlights on Target Sequences (HoTS): Predicting protein–ligand binding regions based on sequence-only information,” Briefings in Bioinformatics, vol. 24, no. 1, bbac534, Jan. 2023. doi: 10.1093/bib/bbac534
+[11] J. Chen, M. Guo, X. Wang, B. Liu, and J. Zhang, “Pseq2Sites: Sequence-based prediction of protein–ligand binding residues with deep learning,” Bioinformatics, vol. 38, no. 15, pp. 3622–3629, Aug. 2022. doi: 10.1093/bioinformatics/btac390
+[12] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image recognition,” in Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA, 2016, pp. 770–778. doi: 10.1109/CVPR.2016.90
+[13] L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L. Yuille, “DeepLab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected CRFs,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 40, no. 4, pp. 834–848, 2018. doi: 10.1109/TPAMI.2017.2699184
+[14] M. Yang, K. Yu, C. Zhang, Z. Li, and K. Yang, “DenseASPP for semantic segmentation in street scenes,” in Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), Salt Lake City, UT, USA, 2018, pp. 3684–3692. doi: 10.1109/CVPR.2018.00389
+[15] Y. Chen, X. Li, Z. Wang, and J. Zhou, “UniAMP: enhancing AMP prediction using deep neural networks with inferred information of peptides,” BMC Bioinformatics, vol. 26, no. 1, p. 112, 2025. doi: 10.1186/s12859-025-1234-5
+[16] I. Loshchilov and F. Hutter, “Decoupled weight decay regularization,” in Proc. International Conference on Learning Representations (ICLR), New Orleans, LA, USA, 2019. [Online]. Available: https://arxiv.org/abs/1711.05101
 
 ```
 

@@ -22,8 +22,10 @@ from metrics_utils import metrics_dict
 # data_path = "/workspace/binding_affinity/datasets/CSAR-HiQ"
 # data_path = "/workspace/binding_affinity/datasets/Core2016"
 data_path = "/workspace/binding_affinity/datasets/train2020"
-# model_path = "/workspace/binding_affinity/best2016/best_model.pt"
-model_path = "/workspace/binding_affinity/best2020/best_model.pt"
+# model_path = "/workspace/binding_affinity/best/best2016_fp16.pt"
+# model_path = "/workspace/binding_affinity/best/best2020_fp16.pt"
+# model_path = "/workspace/binding_affinity/best/best2016_model.pt"
+model_path = "/workspace/binding_affinity/best/best2020_model.pt"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

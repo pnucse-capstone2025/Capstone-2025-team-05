@@ -146,6 +146,33 @@
 │   ├─ planet_bap.py                    # binding affinity prediction모델 (Planet-BAP) 정의
 │   └─ train.py                         # 학습 실행 스크립트
 │
+├── web
+│   ├─ backend
+│   │   ├─ app.py                        # Flask 백엔드 엔트리포인트
+│   │   ├─ routes/                       # API 라우트 정의
+│   │   │   ├─ auth.py                   # 회원가입/로그인/이메일 인증 라우트
+│   │   │   └─ predict.py                # 예측 시작/스트리밍/아카이브/스크린샷 업로드 라우트
+│   │   ├─ services/                     # 서비스 로직
+│   │   │   ├─ email_service.py          # 이메일 인증 코드 발송 및 검증
+│   │   │   └─ predict_service.py        # GPU 서버 호출 및 예측 스트리밍 처리
+│   │   ├─ models/                       # DB 모델
+│   │   │   ├─ user.py                   # User 테이블
+│   │   │   ├─ prediction.py             # Prediction 테이블
+│   │   │   ├─ structure.py              # Structure 테이블
+│   │   │   ├─ verification_code.py      # 인증 코드 테이블
+│   │   │   └─ verified_email.py         # 인증 완료된 이메일 저장
+│   │   ├─ extensions.py                 # Flask 확장 (DB, Mail, JWT 등 초기화)
+│   │   └─ config.py                     # 환경변수 및 설정
+│   │
+│   └─ frontend
+│       └─ src/pages/                    # 주요 React 페이지
+│           ├─ IntroPage.jsx             # 인트로 페이지
+│           ├─ LoginPage.jsx             # 로그인 페이지
+│           ├─ SignupPage.jsx            # 회원가입 페이지
+│           ├─ InputPage.jsx             # 예측 입력 페이지
+│           ├─ PredictionViewPage.jsx    # 예측 결과 뷰어 (NGL)
+│           └─ ArchivedPage.jsx                # 사용자 아카이브 페이지
+│ 
 ├── web_gpu
 │   ├─ app.py                          # Flask 기반 API 서버 (예측 요청 처리)
 │   ├─ esm_embed.py                    # 단백질 시퀀스 ESM-2 임베딩 모듈
@@ -162,7 +189,12 @@
 - **웹 서비스**
 
 ```bash
+# GPU 서버 (모델 서버) 실행
+python app.py
+ngrok http 5050 --domain=planx.ngrok.io
 
+# 웹 서비스 실행 - 임시
+docker compose up --build
 ```
 
 - **Binding site model**

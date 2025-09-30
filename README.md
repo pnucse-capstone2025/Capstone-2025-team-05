@@ -132,6 +132,13 @@
 │   ├─ planet_bap.py                    # binding affinity prediction모델 (Planet-BAP) 정의
 │   └─ train.py                         # 학습 실행 스크립트
 │
+├── web_gpu
+│   ├─ app.py                          # Flask 기반 API 서버 (예측 요청 처리)
+│   ├─ esm_embed.py                    # 단백질 시퀀스 ESM-2 임베딩 모듈
+│   ├─ predict_binding_affinity.py     # 단백질-리간드 결합 친화도 예측 모듈
+│   ├─ predict_binding_site.py         # 단백질 결합 부위(바인딩 사이트) 예측 모듈
+│   └─ structure_service.py            # AlphaFold/ColabFold 구조 예측 및 S3 업로드 서비스
+│
 └── docs                                # 보고서, 포스터, 발표자료
 
 

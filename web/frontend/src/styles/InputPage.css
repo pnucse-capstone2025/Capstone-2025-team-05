@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.input-page {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.input-logo {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1rem;
+}
+
+.input-page h1 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #ff0000;
+  text-shadow:
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 12px rgba(255, 0, 0, 0.6);
+  letter-spacing: 2px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  padding: 0; 
+  gap: 1.4rem;
+}
+
+.form-wrapper label {
+  font-size: 1.5rem;
+  color: #00aaff;
+  text-shadow:
+    0 0 3px rgba(0, 170, 255, 0.6),
+    0 0 6px rgba(0, 170, 255, 0.4);
+  margin-bottom: 0.3rem;
+}
+
+.form-wrapper textarea,
+.form-wrapper input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #e50914;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  box-shadow:
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 10px rgba(255, 0, 0, 0.6);
+  font-family: monospace;
+  box-sizing: border-box; 
+}
+
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder {
+  color: #888;
+}
+
+.submit-button {
+  z-index: 10;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #e50914;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.4);
+  box-sizing: border-box; 
+}
+
+.submit-button:hover {
+  filter: brightness(1.2);
+  transform: scale(1.03);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 10px red); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 25px red); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 10px red); }
+}
+
+.input-top-bar {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.input-left-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.input-archive-btn {
+  font-size: 0.9rem;
+  padding: 3px 9px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.9),
+    0 0 10px rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 15px rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+.input-archive-btn:hover {
+  background: #fff;
+  color: #000;
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.input-nickname {
+  font-size: 0.9rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.input-logout-btn {
+  font-size: 0.8rem;
+  padding: 3px 9px;
+  background: transparent;
+  border: 2px solid #e50914;
+  border-radius: 6px;
+  color: #e50914;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow:
+    0 0 5px rgba(229, 9, 20, 0.9),
+    0 0 10px rgba(229, 9, 20, 0.7);
+  box-shadow:
+    0 0 5px rgba(229, 9, 20, 0.7),
+    0 0 15px rgba(229, 9, 20, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+.input-logout-btn:hover {
+  background: #e50914;
+  color: #fff;
+  box-shadow:
+    0 0 15px rgba(229, 9, 20, 1),
+    0 0 30px rgba(229, 9, 20, 0.8);
+}
